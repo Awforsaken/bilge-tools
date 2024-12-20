@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilge digital toolset</title>
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+  <div id="controls">
+    <button id="save-data">Save Data Locally</button>
+    <button id="share-data">Share Character</button>
+</div>
+<div class="character-area">
+  <h1 class="title">Characters</h1>
+
+  <div id="character-sheets-container"></div> 
+</div>
+
+
+<!-- Button to create a new character -->
+<button id="create-character-btn">Create New Character</button>
+
+<!-- Character Creation Modal -->
+<div id="character-form-modal" style="display: none;">
+  <form id="character-form">
+    <label>Name: <input type="text" id="character-name"></label>
+    <label>Flesh: <input type="number" id="character-flesh"></label>
+    <label>Spike: <input type="number" id="character-spike"></label>
+    <label>Crunch: <input type="number" id="character-crunch"></label>
+    <label>Vigour: <input type="number" id="character-vigour"></label>
+    <label>Fatigue: <input type="number" id="character-fatigue"></label>
+    <button type="submit">Save Character</button>
+  </form>
+</div>
+
+<!-- Modal for parasite details -->
+<div id="parasite-modal" style="display: none;">
+  <div id="parasite-modal-content"></div>
+</div>
+
+
+  <p>compiled by<br><a href="https://danielius.vercel.app" target="_blank">awfor</a></p>
+  <!-- Reference to JavaScript file if needed -->
+  <script src="script.js"></script>
+</body>
+</html>

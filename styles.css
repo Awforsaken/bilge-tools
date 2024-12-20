@@ -1,0 +1,314 @@
+
+
+@import url("https://fonts.googleapis.com/css2?&family=Oxanium:wght@200..800&display=swap");
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.hide {
+    display:none;
+}
+body {
+	background: #161616
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAG0lEQVQYV2P8//+/FCMj4zMGJMCIzIGxKRQEAJgPBAbJqUVTAAAAAElFTkSuQmCC)
+		repeat;
+	display: grid;
+	height: 100dvh;
+	font-family: 'Oxanium', sans-serif;
+	color: #fff;
+	margin: 0;
+	padding: 0 1rem;
+}
+
+h1 {
+	background-color: #ad3633;
+	padding: 0 5px 3px 5px;
+	color: #111111;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-size: 32px;
+	letter-spacing: 2px;
+	margin: 20px 0 10px;
+	border: 1px #ad3633 solid;
+}
+h2 {
+    margin-bottom:1rem;
+}
+
+.log-entry h2 {
+    font-weight: 400;
+    font-size: 1rem;
+    border-bottom: #ad3633;
+}
+
+.log-entry h2::after {
+    display: block;
+    content: "---------------------";
+}
+
+.log-entry p{
+    opacity:0.9;
+    font-weight: 400;
+}
+
+.audio-line {
+    display: grid;
+    grid-template-columns: 1fr 5fr; /* Character name (auto) and dialogue (1fr) */
+    grid-gap: 10px; /* Adjust gap between name and dialogue */
+    align-items: start; /* Align both span and p to the top */
+    margin-bottom: 1rem; /* Space between entries */
+}
+
+.audio-line span {
+    font-weight: bold; /* Make character name bold */
+    text-transform: capitalize; /* Capitalize character name if needed */
+    text-align: right;
+}
+
+.audio-line p {
+    margin: 0; /* Remove any default margins from paragraphs */
+    font-style: italic; /* Italicize the dialogue */
+}
+
+.ambient-noise {
+    width:100%;
+    margin-bottom: 1rem;
+}
+
+.entry {
+    font-weight:400;
+    opacity:0.6;
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+
+h1{
+	font-weight: 500;
+}
+
+
+
+p{
+	margin: 0 0 1rem 0;
+	letter-spacing: 1px;
+}
+
+a {
+	color: #e13431;
+    cursor: pointer;
+}
+a:hover {
+	background: #e13431;
+	color: #111;
+	text-decoration: none;
+}
+
+.content {
+    display:flex;
+    gap:2rem;
+}
+
+h1.title  { 
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  font-size: 2rem;
+}
+
+.character-area {
+  display: flex;
+  flex-direction: row;
+}
+
+
+#shot .options button {
+	height: 40px;
+	padding: 0 10px;
+	margin: 0 10px 15px 0;
+	border: 2px #111 solid;
+	outline: 1px #ad3633 solid;
+	background-color: transparent;
+	font-family: Oxanium;
+	font-size: 14px;
+	letter-spacing: 1px;
+	color: #fff;
+	cursor: pointer;
+	transition: 300ms all ease-out;
+}
+#shot .options button:hover,
+#shot .options button:focus,
+#shot .options button.active {
+	background-color: rgba(245, 213, 70, 0.5);
+}
+#shot .options button.active {
+	border: 2px #ad3633 solid;
+	background-color: #ad3633;
+	color: #111111;
+}
+
+@-webkit-keyframes entrance {
+	to,
+	20%,
+	40%,
+	60%,
+	80% {
+		opacity: 1;
+	}
+	from,
+	10%,
+	30%,
+	50%,
+	70%,
+	90% {
+		opacity: 0;
+	}
+}
+
+/* character sheet */
+
+
+  #character-sheets-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .character-sheet {
+    max-width: 400px;
+    outline: #ad3633 2px solid;
+    outline-offset: -1px;
+    display: flex;
+    flex-direction: column;
+    margin:1rem;
+    background:rgba(0, 0, 0, 0.2);
+  }
+ .character-sheet .cell {
+    outline: #ad3633 2px solid;
+    outline-offset: -1px;
+    padding:0.5rem;
+    display:flex;
+    flex-direction: column;
+    gap:0.2rem;
+ } 
+
+.character-sheet label {
+    font-size: 0.8rem;
+    opacity:0.8;
+}
+
+ .character-sheet .stats {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+ }
+
+
+ .character-sheet .vitals {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+ }
+
+  header {
+    text-align: center;
+  }
+  .none {
+    opacity:0.3;
+  }
+  .purity-bar {
+    display: flex;
+    gap: 2px;
+    margin-top: 0.2rem;
+  }
+  
+  .purity-bar div {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    opacity: 0.3;
+  }
+  
+  .purity-bar div.active {
+    opacity: 1;
+  }
+  
+
+
+  /* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+    padding-top: 60px;
+  }
+  
+  .modal-content {
+    background-color: #161616;
+    margin: 5% auto;
+    padding: 2rem;
+    border: 2px solid #d32f2f;
+    width: 80%;
+  }
+  
+  #close-modal {
+    margin-top: 10px;
+    background-color: #d32f2f; /* Red */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  #close-modal:hover {
+    background-color: #d32f2f;
+  }
+  
+
+
+
+  /* Container for the discomfort bar */
+.discomfort-section {
+    margin-top: 20px;
+  }
+  
+  .discomfort-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 20px; /* Adjust the height of the discomfort bar */
+    border: 1px solid #ccc; /* Light border around the bar */
+    background-color: #f0f0f0; /* Light gray background */
+  }
+  
+  .discomfort-bar div {
+    flex: 1; /* Each cell takes equal space */
+    margin: 0 2px; /* Small spacing between cells */
+    background-color: #ddd; /* Default gray color for inactive cells */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for active cells */
+  }
+  
+  .discomfort-bar div.active {
+    background-color: #ff0000; /* Red color for active discomfort cells */
+  }
+  
+  /* Optionally, you can add some hover effects for better interaction */
+  .discomfort-bar div:hover {
+    background-color: #ff4d4d; /* Light red when hovering */
+  }
+  
+  /* Style for the discomfort label */
+  .discomfort-section h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  

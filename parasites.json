@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1,
+        "name": "Heart spider",
+        "description": "Once per 5 rooms pumps the valunteer full of extra blood, healing 2d6 vigour"
+    },
+    {
+        "id": 2,
+        "name": "Finger worm",
+        "description": "A long finger that perfectly finds nerves when making a nerve check, valunteer flips 2 sets of coins per finger worm and picks one, ignoring the other"
+    },
+    {
+        "id": 3,
+        "name": "Eyeslug",
+        "description": "Replaces one eye with a large slug. When revealing a room, draw 2 per slug, then discard to 1."
+      },
+      {
+        "id": 4,
+        "name": "Facestode",
+        "description": "A wide layer of parasite that covers a volunteer’s face. When taking damage, roll 1d6 and reduce that damage taken by the amount."
+      },
+      {
+        "id": 5,
+        "name": "Stomatone",
+        "description": "A hole-shaped worm that connects a volunteer’s guts to the outside, letting them stuff an extra 30% of parasites into the hole. Their total can now reach +30% per stomatone."
+      },
+      {
+        "id": 6,
+        "name": "Pinskin",
+        "description": "A long-spined worm that covers a volunteer’s body, extending spines out of their body. When dealing damage, deal a further d6 damage per pinskin."
+      },
+      {
+        "id": 7,
+        "name": "Angelclamp",
+        "description": "Wide feathered parasites that latch onto a volunteer’s back, letting them fly briefly over holes and gaps in rooms."
+      },
+      {
+        "id": 8,
+        "name": "Compassworm",
+        "description": "A brain worm that vibrates based on cardinal direction. When moving to another room, look at +2 rooms per compassworm and rearrange them in any order."
+      },
+      {
+        "id": 9,
+        "name": "Whaletongue",
+        "description": "Latches onto a volunteer’s tongue, producing a soothing howl that reduces the Leviathan discomfort by 1 when discovering a new safe room."
+      },
+      {
+        "id": 10,
+        "name": "Godsac",
+        "description": "A golden sac that latches onto a volunteer’s armpit, healing 1 vigour per godsac per enemy defeated."
+      }
+  ]
+  
