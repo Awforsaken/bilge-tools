@@ -105,7 +105,7 @@ function renderCharacterSheets(characterData, parasitesData) {
   container.innerHTML = ""; // Clear the container before rendering
 
   if (characterData.length === 0) {
-    container.innerHTML = "<p>No character data available. Please add a character.</p>";
+    container.innerHTML = "<p>No character data available.</p>";
     return;
   }
 
@@ -128,7 +128,7 @@ function renderCharacterSheets(characterData, parasitesData) {
     sheet.innerHTML = `
       <div class="character-details cell">
         <span>${character.name}</span>
-        <button class="delete-character-btn">Delete</button>
+        
       </div>
       <div class="stats">
         <div class="cell">
@@ -170,6 +170,7 @@ function renderCharacterSheets(characterData, parasitesData) {
         <label>Parasitic Purity</label>
         <div class="purity-bar">${generatePurityBar(purity)}</div>
       </div>
+      <button class="delete-character-btn">Flatline</button>
     `;
 
     container.appendChild(sheet);

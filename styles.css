@@ -132,19 +132,20 @@ h1.title  {
 button {
 	padding: 2px 10px;
 	border: 2px #111 solid;
-	outline: 1px #ad3633 solid;
+	outline: 2px #ad3633 solid;
+  outline-offset: -1px;
 	background-color: transparent;
 	font-family: Oxanium;
 	font-size: 14px;
 	letter-spacing: 1px;
 	color: #fff;
 	cursor: pointer;
-	transition: 300ms all ease-out;
 }
 button:hover,
 button:focus,
 button.active {
-	background-color: rgba(245, 213, 70, 0.5);
+	background-color: #ad3633;
+  color:black;
 }
 button.active {
 	border: 2px #ad3633 solid;
