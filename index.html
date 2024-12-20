@@ -9,41 +9,62 @@
 </head>
 <body>
    
-  <div id="controls">
-    <button id="save-data">Save Data Locally</button>
-    <button id="share-data">Share Character</button>
+<!-- Example Save and Share buttons -->
+<div>
+  <button id="save-button">Save Character</button>
+<button id="share-button">Share Character</button>
 </div>
+
+
+  
 <div class="character-area">
   <h1 class="title">Characters</h1>
 
   <div id="character-sheets-container"></div> 
+  <button id="create-character-btn">+</button>
 </div>
 
-
 <!-- Button to create a new character -->
-<button id="create-character-btn">Create New Character</button>
+
 
 <!-- Character Creation Modal -->
-<div id="character-form-modal" style="display: none;">
-  <form id="character-form">
-    <label>Name: <input type="text" id="character-name"></label>
-    <label>Flesh: <input type="number" id="character-flesh"></label>
-    <label>Spike: <input type="number" id="character-spike"></label>
-    <label>Crunch: <input type="number" id="character-crunch"></label>
-    <label>Vigour: <input type="number" id="character-vigour"></label>
-    <label>Fatigue: <input type="number" id="character-fatigue"></label>
-    <button type="submit">Save Character</button>
-  </form>
+<div id="share-modal" class="modal">
+  <div class="modal-content">
+    <h2>Share Your Character</h2>
+    <input type="text" id="share-url" readonly />
+    <button id="close-share-modal" class="close-btn">Close</button>
+  </div>
 </div>
 
 <!-- Modal for parasite details -->
-<div id="parasite-modal" style="display: none;">
-  <div id="parasite-modal-content"></div>
+<div id="parasite-modal" class="modal">
+  <div class="modal-content">
+    <div id="parasite-modal-content"></div>
+    <button id="close-parasite-modal" class="close-btn">Close</button>
+  </div>
 </div>
 
+<!-- Character Creation Modal -->
+<div id="character-form-modal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <form id="character-form">
+      <label>Name: <input type="text" id="character-name"></label>
+      <label>Flesh: <input type="number" id="character-flesh"></label>
+      <label>Spike: <input type="number" id="character-spike"></label>
+      <label>Crunch: <input type="number" id="character-crunch"></label>
+      <label>Vigour Max: <input type="number" id="character-vigour-max"></label>
+      <label>Vigour Current: <input type="number" id="character-vigour-current"></label>
+      <label>Fatigue Max: <input type="number" id="character-fatigue-max"></label>
+      <label>Fatigue Current: <input type="number" id="character-fatigue-current"></label>
+      <button type="submit">Save Character</button>
+    </form>
+    <button id="close-character-form-modal" class="close-btn">Close</button>
+  </div>
+</div>
 
-  <p>compiled by<br><a href="https://danielius.vercel.app" target="_blank">awfor</a></p>
-  <!-- Reference to JavaScript file if needed -->
-  <script src="script.js"></script>
+<p>compiled by<br><a href="https://danielius.vercel.app" target="_blank">awfor</a></p>
+
+<!-- Reference to JavaScript file if needed -->
+<script src="script.js"></script>
 </body>
 </html>

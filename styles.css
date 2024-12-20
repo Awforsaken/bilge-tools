@@ -9,7 +9,7 @@
 	padding: 0;
 }
 
-.hide {
+.hidden {
     display:none;
 }
 body {
@@ -115,19 +115,22 @@ a:hover {
 h1.title  { 
   writing-mode: vertical-lr;
   text-orientation: upright;
-  font-size: 2rem;
+  font-size: 1rem;
+  margin:0;
+  padding:0.5rem;
 }
 
 .character-area {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  gap:2rem;
+  align-items: flex-start;
 }
 
 
-#shot .options button {
-	height: 40px;
-	padding: 0 10px;
-	margin: 0 10px 15px 0;
+button {
+	padding: 2px 10px;
 	border: 2px #111 solid;
 	outline: 1px #ad3633 solid;
 	background-color: transparent;
@@ -138,12 +141,12 @@ h1.title  {
 	cursor: pointer;
 	transition: 300ms all ease-out;
 }
-#shot .options button:hover,
-#shot .options button:focus,
-#shot .options button.active {
+button:hover,
+button:focus,
+button.active {
 	background-color: rgba(245, 213, 70, 0.5);
 }
-#shot .options button.active {
+button.active {
 	border: 2px #ad3633 solid;
 	background-color: #ad3633;
 	color: #111111;
@@ -173,7 +176,7 @@ h1.title  {
   #character-sheets-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 2rem;
     justify-content: center;
   }
   
@@ -183,7 +186,6 @@ h1.title  {
     outline-offset: -1px;
     display: flex;
     flex-direction: column;
-    margin:1rem;
     background:rgba(0, 0, 0, 0.2);
   }
  .character-sheet .cell {
@@ -206,11 +208,35 @@ h1.title  {
 
  }
 
-
  .character-sheet .vitals {
     display:grid;
     grid-template-columns: 1fr 1fr;
  }
+
+/* Style for editable text inputs */
+input[type="number"], input[type="text"] {
+	font-family: 'Oxanium', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  background-color: transparent;
+  border: none; /* Subtle border color */
+  border-bottom:2px solid #f5f5f5;
+  background-color: #ad35331c; ;
+}
+
+.vitals input[type="number"], .vitals input[type="text"] {
+	width: 60px;
+}
+
+
+/* Style for input when focused */
+input[type="number"]:focus, input[type="text"]:focus {
+  background-color: #ad3633; 
+  color:black;
+  outline: none; /* Remove default outline */
+}
+
+
 
   header {
     text-align: center;
